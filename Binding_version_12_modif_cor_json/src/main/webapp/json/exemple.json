@@ -1,0 +1,26 @@
+{
+	"player":[
+				{ "name":"toto",
+				  "action":100,
+				  "status":false
+				},
+				
+				{ "name":"otto",
+				  "action":1000,
+				  "status":true
+				}
+	         ],
+	         
+	 "plouc":[
+				{ "name":"bob",
+				  "action":20,
+				  "status":true
+				},
+				
+				{ "name":"bil",
+				  "action":50,
+				  "status":false
+				}
+	         ]
+
+}

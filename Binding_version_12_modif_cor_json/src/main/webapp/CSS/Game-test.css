@@ -1,0 +1,52 @@
+		img{
+		max-width: 100%;
+ 		max-height: 100%;
+		
+		}
+		
+		
+		.card1{
+		position: absolute;
+		top : 10%;
+		left: 10%;
+		}
+		
+		.card2{
+		position: absolute;
+		top : 10%;
+		left: 20%;
+		}		
+		
+	
+		
+		.card{
+			width: 100px;
+			height: 136px ;
+			cursor: help;
+
+			overflow: hidden;
+			transition : transform
+			
+		}
+		
+		.card:hover{
+			transform: scale(1.2);
+		}
+		
+		.display{
+			position:absolute;
+			top: 1%;
+			right:1%;
+			height: 680px;
+			width: 500px;
+	
+		}
+		
+		#displayedImage {
+		    max-width: 100%;
+    		max-height: 100%;
+    		object-fit: fill;
+    		
+		
+		
+		}

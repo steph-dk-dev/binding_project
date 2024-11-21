@@ -1,0 +1,236 @@
+@charset "ISO-8859-1";
+*{
+			margin: 0;
+			padding: 0;
+			height: auto;
+			width: 100%;
+		}
+		
+		img{
+			max-width: 100%;
+		 	max-height: 100%;
+		 	
+				
+		}
+		fieldset{
+		height: auto;
+		width : 66%;
+		
+		
+		}
+		.card{
+			width: 100px;
+			height: 136px ;
+			cursor: help;
+			overflow: hidden;
+			transition : transform	
+		}
+						
+		.card:hover{
+			transform: scale(1.2);
+		}
+		
+		.tresor{
+			position:absolute;			
+			top : 1%;
+			left : 0.5%;
+			border: solid 1px yellow;
+			
+			
+		}
+		
+		.common{
+			position:absolute;			
+			top : 1%;
+			left : 14%;
+			border: solid 1px cyan;
+			
+			height: auto;
+			width: 12%;
+		}
+		
+		.monster{
+			border: solid 1px black;
+			position:absolute;			
+			top : 1%;
+			left : 28%;
+			
+		}
+		
+		.perso1, .power1, .main1{
+			border: solid 1px red;
+				
+		}
+		
+		.perso2, .power2, .main2{
+			border: solid 1px blue;
+				
+		}
+		.perso1{
+			position:absolute;			
+			top : 30%;
+			left : 1%;
+		}
+		
+		.perso2{
+			position:absolute;			
+			top : 64%;
+			left : 1%;
+
+		}
+
+
+
+
+
+		.persocomp1{
+			position: absolute;
+			left: 1%;
+			top:20%;
+		
+		
+		}
+		.persocomp2{
+			position: relative;
+			top:0%;
+			left: 10%;
+				
+				
+				
+		
+		}
+		.persocomp3,.persocomp4{
+			position: relative;
+			top:0%;
+			left: 10%;
+	
+
+	
+
+		}
+		.curse1{
+		position: absolute;
+		top: 10px;
+		left:80%;
+		
+		}
+		.curse2{
+		position: absolute;
+		top: 50px;
+		left:80%;
+		}
+		
+		
+		
+		legend{
+			display: block;
+			text-align: center;
+			color: black;
+			width: auto;
+			
+		}
+		
+		.fieldset1 {
+			
+			padding :20px;
+			height: 23%;
+			width: 10%;
+			
+		}
+		.fieldset2 {
+			
+			padding :20px;
+			height: 15%;
+			width: 60%;
+			
+		}
+		.fieldset3 {
+			
+			padding :20px;
+			height: 64%;
+			width: 15%;
+			
+		}
+		
+
+
+		.display{
+			position:absolute;
+			top: 1%;
+			right:1%;
+			height: 300px;
+			width: 200px;
+	
+		}
+		
+		#displayedImage {
+		    max-width: 100%;
+    		max-height: 100%;
+    		object-fit: fill;
+    		
+		
+		
+		}
+        .flex-card1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes de taille égale */
+            gap: 5px; /* Espace entre les images */
+
+        }
+
+        .flex-card1 img {
+            width: 70px; /* Les images remplissent la cellule */
+            height: calc(70px*1.36); /* Préserver le ratio d'aspect */
+        }
+        .flex-card2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes de taille égale */
+            gap: 5px; /* Espace entre les images */
+
+        }
+
+        .flex-card2 img {
+            width: 70px; /* Les images remplissent la cellule */
+            height: 95.2px; /* Préserver le ratio d'aspect */
+        }
+        .flex-card4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes de taille égale */
+            gap: 5px; /* Espace entre les images */
+
+        }
+
+        .flex-card4 img {
+            width: 70px; /* Les images remplissent la cellule */
+            height: 95.2px; /* Préserver le ratio d'aspect */
+        }
+        .flex-card3 {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr); /* 2 colonnes de taille égale */
+            gap: 5px; /* Espace entre les images */
+
+        }
+
+        .flex-card3 img {
+            width: 70px; /* Les images remplissent la cellule */
+            height: 95.2px; /* Préserver le ratio d'aspect */
+        }
+        .reset{
+        position : absolute;
+        top: 1%;
+        left: 45%;
+        
+        
+        }
+        #modale{
+        position:absolute;
+        bottom: 10%;
+        right: 10%;
+        width:100px;
+        height:100px;
+        border:1px solid black;
+        background-color: pink;
+        
+        
+        
+        }
