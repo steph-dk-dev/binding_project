@@ -201,6 +201,7 @@ public class ObjContextGame {
 			}
 		for(int i=1;i<=4;i++) {
 			if(player1.getMyCurse().size()>=i) {
+				System.out.println("ligne 204 : player1.getMyCurse().get(i-1) -->"+player1.getMyCurse().get(i-1));
 				Liste.add(player1.getMyCurse().get(i-1));	
 			} else {
 				Liste.add(null);

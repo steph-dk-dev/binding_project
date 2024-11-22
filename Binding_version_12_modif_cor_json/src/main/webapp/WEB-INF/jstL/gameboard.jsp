@@ -63,7 +63,8 @@ frame.initFrame()
 			<img class="card" id="tresorDeck" alt="" src="${sessionScope.listobjCG.tresor.tresorDos}" onclick="showImage(this)">
 				<c:choose>
             	<c:when test="${not empty sessionScope.listobjCG.tresor.tresorDefausse[0]}">
-                	<img class="card" id="tresor1" alt="" name= "${pointer}" src="${sessionScope.listobjCG.tresor.tresorDefausse[fn:length(sessionScope.listobjCG.tresor.tresorDefausse)-1]}" onclick="showImage(this)">
+                	<img class="card" id="tresor1" alt="" name= "${pointer}" 
+                	     src="${sessionScope.listobjCG.tresor.tresorDefausse[fn:length(sessionScope.listobjCG.tresor.tresorDefausse)-1]}" onclick="showImage(this)">
                 	<c:set var ="pointer" value="${pointer+1 }"/>
             	</c:when>
             	<c:otherwise>
@@ -71,9 +72,11 @@ frame.initFrame()
                 	<c:set var ="pointer" value="${pointer+1 }"/>
             	</c:otherwise>
         </c:choose>
-				<img class="card" id="tresor1"  name= "${pointer}" alt="" src="${sessionScope.listobjCG.tresor.tresorVisible[0].image}" onclick="showImage(this)">
+				<img class="card" id="tresor1"  name= "${pointer}" alt="" 
+				     src="${sessionScope.listobjCG.tresor.tresorVisible[0].image}" onclick="showImage(this)">
 				<c:set var ="pointer" value="${pointer+1 }"/>
-				<img class="card" id="tresor2"  name= "${pointer}" alt="" src="${sessionScope.listobjCG.tresor.tresorVisible[1].image}" onclick="showImage(this)">
+				<img class="card" id="tresor2"  name= "${pointer}" alt="" 
+				     src="${sessionScope.listobjCG.tresor.tresorVisible[1].image}" onclick="showImage(this)">
 				<c:set var ="pointer" value="${pointer+1 }"/>	
 			</div>
 	</fieldset>
@@ -84,7 +87,9 @@ frame.initFrame()
 			<img class="card" id="tresorDeck" alt="" src="${sessionScope.listobjCG.common.commonDos}" onclick="showImage(this)">
 			<c:choose>
             	<c:when test="${not empty sessionScope.listobjCG.common.commonDefausse[0]}">
-                	<img class="card" id="commondefause" name= "${pointer}" alt="" src="${sessionScope.listobjCG.common.commonDefausse[fn:length(sessionScope.listobjCG.common.commonDefausse)-1]}" onclick="showImage(this)">
+                	<img class="card" id="commondefause" name= "${pointer}" alt="" 
+                	     src="${sessionScope.listobjCG.common.commonDefausse[fn:length(sessionScope.listobjCG.common.commonDefausse)-1]}" 
+                	     onclick="showImage(this)">
                 	<c:set var ="pointer" value="${pointer+1 }"/>
             	</c:when>
             	<c:otherwise>
@@ -101,7 +106,8 @@ frame.initFrame()
 			<c:choose>
             	<c:when test="${not empty sessionScope.listobjCG.monstre.monsterDefausse[0]}">
             		<c:out value="${sessionScope.listobjCG.monstre.monsterDefausse[fn:length(sessionScope.listobjCG.monstre.monsterDefausse)-1]}"/>
-                	<img class="card" id="commondefause" name= "${pointer}" alt="" src="${sessionScope.listobjCG.monstre.monsterDefausse[fn:length(sessionScope.listobjCG.monstre.monsterDefausse)-1]}" onclick="showImage(this)">
+                	<img class="card" id="commondefause" name= "${pointer}" alt="" 
+                	     src="${sessionScope.listobjCG.monstre.monsterDefausse[fn:length(sessionScope.listobjCG.monstre.monsterDefausse)-1]}" onclick="showImage(this)">
             	</c:when>
             	<c:otherwise>
                 	<img class="card" id="commondefausse" name= "${pointer}" alt="" src="" onclick="showImage(this)">
@@ -109,15 +115,18 @@ frame.initFrame()
             	</c:otherwise>
        		</c:choose>
        		
-       		<img class="card" id="monster1"  name= "${pointer}" alt="" src="${sessionScope.listobjCG.monstre.monsterVisible[0].image}" onclick="showImage(this)">
+       		<img class="card" id="monster1"  name= "${pointer}" alt="" 
+       		     src="${sessionScope.listobjCG.monstre.monsterVisible[0].image}" onclick="showImage(this)">
        		<c:set var ="pointer" value="${pointer+1 }"/>
-			<img class="card" id="monster2"  alt="" name= "${pointer}" src="${sessionScope.listobjCG.monstre.monsterVisible[1].image}" onclick="showImage(this)">
+			<img class="card" id="monster2"  alt="" name= "${pointer}" 
+			     src="${sessionScope.listobjCG.monstre.monsterVisible[1].image}" onclick="showImage(this)">
 			<c:set var ="pointer" value="${pointer+1 }"/>
 			</div>
 	</fieldset>
 	<fieldset class="perso1">
 
-		<img class="card persocomp1" id="perso1card"  name= "${pointer}" alt="" src="${sessionScope.listobjCG.player1.image}" onclick="showImage(this)">
+		<img class="card persocomp1" id="perso1card"  name= "${pointer}" alt="" 
+		     src="${sessionScope.listobjCG.player1.image}" onclick="showImage(this)">
 		<c:set var ="pointer" value="${pointer+1 }"/>
 
 	<fieldset class="main1 fieldset2 persocomp2">
@@ -182,11 +191,12 @@ frame.initFrame()
 		<!--  debut modif  -->
 		<c:forEach var="pt2" begin="0" end ="3">
 			   <c:choose>
-	          		<c:when test="${not empty sessionScope.listobjCG.player2.myCurse[pt2]}">
-	              	<img class="card" id="${f1:merge('curse1card',pt2) }" alt="" src="${sessionScope.listobjCG.player1.myCurse[pt2].image}" onclick="showImage(this)">
+	          		<c:when test="${not empty sessionScope.listobjCG.player1.myCurse[pt2]}">
+	              	<img class="card" id="${f1:merge('curse1card',pt2+1) }" alt="${pt2+1 }" 
+	              	     src="${sessionScope.listobjCG.player1.myCurse[pt2].image}" onclick="showImage(this)">
 	          		</c:when>
 	          	<c:otherwise>
-	              	<img class="card" id="${f1:merge('curse1card',pt2) }" alt="" src="" onclick="showImage(this)">
+	              	<img class="card" id="${f1:merge('curse1card',pt2+1) }" alt="${pt2 }" src="" onclick="showImage(this)">
 	          	</c:otherwise>
 			</c:choose>
 		
@@ -199,7 +209,8 @@ frame.initFrame()
 	</fieldset>
 		<fieldset class="perso2">
 		<legend>Personnage 2</legend>
-		<img class="card persocomp1" id="perso2card"  alt="" src="${sessionScope.listobjCG.player2.image}" onclick="showImage(this)">
+		<img class="card persocomp1" id="perso2card"  alt=""     
+		     src="${sessionScope.listobjCG.player2.image}" onclick="showImage(this)">
 	
 	<fieldset class="main2 fieldset2 persocomp2">
 		<legend>Mains personnage 2</legend>
@@ -228,7 +239,8 @@ frame.initFrame()
 	<fieldset class="power2  fieldset2 persocomp3">
 		<legend>Pouvoir actif personnage 2</legend>
 		<div class="flex-card3">
-			<img class="card" id="power2card1"  alt="" src="${sessionScope.listobjCG.player2.eternal.image}" onclick="showImage(this)">
+			<img class="card" id="power2card1"  alt=""    
+			     src="${sessionScope.listobjCG.player2.eternal.image}" onclick="showImage(this)">
 		<c:forEach var="i" begin="0" end="8">
 			<c:choose>
 				
@@ -257,10 +269,11 @@ frame.initFrame()
 		<c:forEach var="pt" begin="0" end ="3">
 			   <c:choose>
 	          		<c:when test="${not empty sessionScope.listobjCG.player2.myCurse[pt]}">
-	              	<img class="card" id="${f1:merge('curse2card',pt) }" alt="" src="${sessionScope.listobjCG.player2.myCurse[pt].image}" onclick="showImage(this)">
+	              	<img class="card" id="${f1:merge('curse2card',pt+1) }" alt="" 
+	              	     src="${sessionScope.listobjCG.player2.myCurse[pt].image}" onclick="showImage(this)">
 	          		</c:when>
 	          	<c:otherwise>
-	              	<img class="card" id="${f1:merge('curse2card',pt) }" alt="" src="" onclick="showImage(this)">
+	              	<img class="card" id="${f1:merge('curse2card',pt+1) }" alt="" src="" onclick="showImage(this)">
 	          	</c:otherwise>
 			</c:choose>
 		
